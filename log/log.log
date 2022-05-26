@@ -1,0 +1,2 @@
+2022/05/27 00:54:28 load environment variable
+2022/05/27 00:54:28 failed to connect to `host=db user=postgres database=law`: hostname resolving error (lookup db: no such host)

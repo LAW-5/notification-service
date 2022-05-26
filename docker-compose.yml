@@ -1,0 +1,41 @@
+version: "3.8"
+networks:
+  notification:
+services:
+  app:
+    build:
+      context: .
+      target: Production
+    ports:
+      - 5000:5000
+    restart: always
+    depends_on:
+      - db
+    networks:
+      - notification
+  promtail:
+    image: grafana/promtail
+    volumes:
+      - ./log:/var/notification/
+      - ./log:/app/log
+      - ./promtail:/etc/promtail
+    restart: unless-stopped
+    command: -config.file=/etc/promtail/promtail-config.yml
+    networks:
+      - notification
+  db:
+    image: postgres:13.3-alpine
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
+    networks:
+      - notification
+volumes:
+  db-data:
+    driver: local
