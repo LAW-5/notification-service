@@ -40,7 +40,7 @@ func (s *Server) List(ctx context.Context, in *pb.ListRequest) (*pb.ListResponse
 }
 
 func NewNotificationGRPCServer(db *gorm.DB) {
-	lis, err := net.Listen("tcp", fmt.Sprintf(":%s", utils.ApiConfig.PORT))
+	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%s", utils.ApiConfig.PORT))
 	if err != nil {
 		log.Fatal(err.Error())
 	}
