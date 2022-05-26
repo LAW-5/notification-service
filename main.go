@@ -17,6 +17,7 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
+	shared.NewNotificationGRPCServer(db)
 
 	connectMQ, err := amqp.Dial(utils.ApiConfig.AMQPServerURL)
 	if err != nil {
