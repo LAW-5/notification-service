@@ -4,5 +4,5 @@ COPY go.mod .env ./
 RUN go mod tidy
 COPY . .
 RUN go build -o notification-srv
-EXPOSE 5000
+EXPOSE 5010
 CMD /app/notification-srv

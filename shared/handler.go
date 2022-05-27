@@ -22,5 +22,5 @@ func NotificationHandler(arg []byte, db *gorm.DB) {
 
 	db.Create(message)
 
-	log.Printf("%d - %s - %s", message.UserId, message.Header, message.Message)
+	log.Printf("create notification for: %d - %s - %s", message.UserId, message.Header, message.Message)
 }

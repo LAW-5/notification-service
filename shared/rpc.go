@@ -22,6 +22,8 @@ func (s *Server) List(ctx context.Context, in *pb.ListRequest) (*pb.ListResponse
 	var notifications []database.Notification
 	s.db.Where("user_id = ?", in.UserId).Find(&notifications)
 
+	log.Printf("user_id:%d - requesting to list notification", in.UserId)
+
 	var datas = []*pb.Data{}
 	for _, v := range notifications {
 		data := &pb.Data{
@@ -40,7 +42,7 @@ func (s *Server) List(ctx context.Context, in *pb.ListRequest) (*pb.ListResponse
 }
 
 func NewNotificationGRPCServer(db *gorm.DB) {
-	lis, err := net.Listen("tcp", fmt.Sprintf("localhost:%s", utils.ApiConfig.PORT))
+	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", utils.ApiConfig.PORT))
 	if err != nil {
 		log.Fatal(err.Error())
 	}
@@ -48,7 +50,9 @@ func NewNotificationGRPCServer(db *gorm.DB) {
 	s := grpc.NewServer()
 	pb.RegisterNotificationServiceServer(s, &Server{db: db})
 
-	log.Println("rpc server running")
-
-	s.Serve(lis)
+	log.Printf("server listening at %v", lis.Addr())
+	err = s.Serve(lis) 
+	if err != nil {
+		log.Fatal(err.Error())
+	}
 }

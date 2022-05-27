@@ -1,2 +1,39 @@
-2022/05/27 00:54:28 load environment variable
-2022/05/27 00:54:28 failed to connect to `host=db user=postgres database=law`: hostname resolving error (lookup db: no such host)
+2022/05/27 05:35:37 load environment variable
+2022/05/27 05:35:37 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:37 load environment variable
+2022/05/27 05:35:37 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:38 load environment variable
+2022/05/27 05:35:38 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:39 load environment variable
+2022/05/27 05:35:39 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:40 load environment variable
+2022/05/27 05:35:40 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:42 load environment variable
+2022/05/27 05:35:42 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:46 load environment variable
+2022/05/27 05:35:46 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:54 load environment variable
+2022/05/27 05:35:54 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:54 load environment variable
+2022/05/27 05:35:54 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:55 load environment variable
+2022/05/27 05:35:55 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:56 load environment variable
+2022/05/27 05:35:56 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:57 load environment variable
+2022/05/27 05:35:57 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:35:59 load environment variable
+2022/05/27 05:35:59 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:36:03 load environment variable
+2022/05/27 05:36:03 failed to connect to `host=localhost user=postgres database=law`: dial error (dial tcp [::1]:5432: connect: cannot assign requested address)
+2022/05/27 05:37:01 load environment variable
+2022/05/27 05:37:01 migrating database
+2022/05/27 05:37:01 connected to database
+2022/05/27 05:37:01 server listening at [::]:5010
+2022/05/27 05:37:02 conencted to amqp
+2022/05/27 05:38:15 create notification for: 1 - Pesanan Berhasil Dikirim - RTX 2080 Berhasil Dikirim Ke Jakarta
+2022/05/27 05:41:37 load environment variable
+2022/05/27 05:41:37 migrating database
+2022/05/27 05:41:37 connected to database
+2022/05/27 05:41:37 server listening at [::]:5010
+2022/05/27 05:41:37 conencted to amqp

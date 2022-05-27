@@ -21,7 +21,7 @@ func NewDatabase() (*gorm.DB, error) {
 	DB, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	MigrateDatabase(DB)
 
-	log.Println("connect to database")
+	log.Println("connected to database")
 	return DB, err
 }
 
@@ -30,4 +30,5 @@ func MigrateDatabase(db *gorm.DB) {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+	log.Println("migrating database")
 }

@@ -25,7 +25,7 @@ func main() {
 		log.Fatal(err.Error())
 	}
 
-	shared.NewNotificationGRPCServer(db)
+	go shared.NewNotificationGRPCServer(db)
 
 	connectMQ, err := amqp.Dial(utils.ApiConfig.AMQPServerURL)
 	if err != nil {
@@ -51,6 +51,8 @@ func main() {
 	if err != nil {
 		log.Fatal(err.Error())
 	}
+
+	log.Println("conencted to amqp")
 
 	forever := make(chan bool)
 

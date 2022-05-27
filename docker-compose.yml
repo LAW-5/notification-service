@@ -6,8 +6,10 @@ services:
     build:
       context: .
       target: Production
+    volumes:
+      - ./log:/app/log
     ports:
-      - 5000:5000
+      - 5010:5010
     restart: always
     depends_on:
       - db
@@ -16,8 +18,7 @@ services:
   promtail:
     image: grafana/promtail
     volumes:
-      - ./log:/var/notification/
-      - ./log:/app/log
+      - ./log:/var/notification
       - ./promtail:/etc/promtail
     restart: unless-stopped
     command: -config.file=/etc/promtail/promtail-config.yml
