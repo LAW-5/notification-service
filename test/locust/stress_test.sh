@@ -1,0 +1,1 @@
+ab -n 1000 -c 10 -H "Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiZW1haWwiOiJzdHJpbmdAbWFpbC5jb20iLCJpYXQiOjE2NTU3MTkxNTcsImV4cCI6MTY1NTgwNTU1N30.sL1WXOdURouTIuYCop65LzCUQcCHTZi1oUT6m-Erx1A" -rk https://gateway.nofamex.tech/notification/list
